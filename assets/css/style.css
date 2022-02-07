@@ -1,0 +1,161 @@
+/* footer */
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: none;
+    font-size: small;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .line {
+      margin-top: 30px;
+      margin-left: 70px;
+      margin-right: 70px;
+      border-top: 3px solid;
+      color: black;
+      opacity: 0.8;
+  }
+  /*Product List*/
+  .main {
+      margin-top: 30px;
+      margin-left: 70px;
+      margin-right: 70px;
+      margin-bottom: 30px;
+  }
+  .line2 {
+    margin-top: 0px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-top: 3px solid;
+    color: black;
+    opacity: 0.8;
+  }
+  .plist {
+      display: inline-block;
+      font-size: 26px;
+  }
+  .btn1 {
+     float: right;
+     padding-right: 15px;
+  }
+  .btn2 {
+      float: right;
+      padding-right: 15px;
+  }
+  /*Product Add*/
+  .main2 {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.line3 {
+  margin-top: 0px;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-top: 3px solid;
+  color: black;
+  opacity: 0.8;
+}
+.padd {
+    display: inline-block;
+    font-size: 26px;
+}
+.btn3 {
+   float: right;
+   padding-right: 15px;
+}
+.btn4 {
+    float: right;
+    padding-right: 15px;
+}
+#product_form {
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}
+/*Grid*/
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-auto-rows: 170px;
+    grid-gap: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+  
+  .grid > *:first-child {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+  }
+  
+  /* Just to make the grid visible */
+  
+  .grid > * {
+    border: 1px black solid;
+  }
+
+  .grid-item {
+    border: 3px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+
+  .square-container {
+    display: grid;
+    grid-template-columns: repeat(4, 0.2fr);
+    grid-gap: 40px;
+    margin: 80px;
+  }
+  
+  .square {
+    border: solid black 1px;
+    padding-top: 100%; /* padding trick directly on the grid item */
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .square .content { /* absolutely positioned */
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+
+  /*switcher*/
+  .switcher {
+    margin: 15px;
+    margin-right: 500px;
+    padding: 15px;
+    border: 3px solid black;
+  }

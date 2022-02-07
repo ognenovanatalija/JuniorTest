@@ -1,0 +1,94 @@
+<div class="main2">
+    <h2 class="padd"> Product Add</h2>
+    <!--<div class="btn3"> <button>Cancel</button></div>-->
+    <!-- <button><a href="#!">  Cancel</a></button> -->
+    
+    <div class="btn3"><a href="#!"> <button> Cancel </button></a></div>
+    <div class="alert alert-danger" ng-show="error">
+      popolni pravilno
+    </div>
+    <div class="btn4"> <button data-ng-click="addProduct(sku,name,price) ">Save</button></div> 
+    <!--<div class="btn4"> <button data-ng-click="myFormDvd.size.$valid && myFormBook.weight.$valid && myFormFurniture.? addProduct(sku,name,price) :errorMsg()">Save</button></div> -->
+</div>
+<hr class="line3">
+<form id="product_form">
+
+      <div class="sku">
+      <label for="sku"><b>SKU</b></label>
+      <input type="text" id="sku" name="sku" data-ng-model="sku">
+      </div>
+
+      <br>
+
+      <div class="name">
+        <label for="name"><b>Name</b></label>
+        <input type="text" id="name" name="name" data-ng-model="name">
+      </div>
+
+      <br>
+
+      <div class="price">
+        <label for="price"><b>Price($)</b></label>
+        <input type="text" id="price" name="price" data-ng-model="price">
+      </div>
+
+      <br>
+
+     
+      
+  <div id="productType">
+    <label for="producttype"><b> Type Switcher </b></label>
+    
+      <select id="switcher" name="switcher" data-ng-model="switcher" data-ng-change="changeSwitcher()">
+          <option>Type Switcher</option>
+          <option value="dvd">DVD</option>
+          <option value="book">Book</option>
+          <option value="furniture">Furniture</option>
+
+      </select>
+
+      <div class="switcher" id="dvd" ng-show="dvd_div"> 
+          <form name="myFormDvd">
+            <label for="dvd_id">Size(MB)</label>
+            <span class="alert alert-danger" ng-show="myFormDvd.size.$invalid">vnesi size</span>
+            <input type="text" id="size" name="size" ng-minlength="2" data-ng-model="size" required>
+          </form>
+          <br>
+          <br>
+          <p>Please, provide size in MB</p>
+      </div>
+
+      <div class="switcher" id="book" ng-show="book_div">
+        <form>
+          <label for="book_id">Weight(KG)</label>
+          <input type="text" id="weight" name="weight" data-ng-model="weight" required>
+        </form>
+        <br>
+        <br>
+        <p>Please, provide weight in KG</p>
+      </div>
+
+      <div class="switcher" id="furniture" ng-show="furniture_div">
+        <form>
+          <label for="furniture_id">Height(CM)</label>
+          <input type="text" id="height" name="height" data-ng-model="height" required>
+
+          <label for="furniture_id">Width(CM)</label>
+          <input type="text" id="width" name="width" data-ng-model="width" required>
+
+          <label for="furniture_id">Length(CM)</label>
+          <input type="text" id="length" name="length" data-ng-model="length" required>
+        </form>
+        <br>
+        <br>
+        <p>Please provide dimensions HxMxL format in CM</p>
+      </div>
+
+
+
+    </div>
+
+  </form>
+
+
+

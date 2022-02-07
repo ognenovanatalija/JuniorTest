@@ -1,0 +1,33 @@
+    <div class="main">
+        <h2 class="plist"> Product list</h2>
+        <!--<div class="btn1"> <button>MASS DELETE</button></div> -->
+        <div class="btn1"><input type="button" value="MASS DELETE" ng-click="Delete()" /> </div> 
+        <div class="btn2">
+        <a href="#!addproduct"> <button> ADD </button></a>
+        </div>
+    </div>
+    <hr class="line2">
+
+
+      <div class="square-container" ng-app="MyApp" ng-controller="myCtrl">
+          <div class="square" data-ng-repeat="products in product" value="{{products.sku}}">
+              <div class="content">
+                  
+                  <p>{{products.sku}}</p>
+                  <p>{{products.name}}</p>
+                  <p>{{products.price}} $</p>
+                  <p data-ng-if="products.size>0">{{products.size}} MB</p>
+                  <p data-ng-if="products.weight>0">{{products.weight}} KG</p>
+                  <p data-ng-if="products.height>0">{{products.height}}x{{products.width}}x{{products.length}}</p>
+
+                  <!-- <div>
+                  <label for="chkSku_{{products.sku}}">
+                    <input id="sku.{{products.sku}}" name="chkSku_{{products.sku}}[]" type="checkbox" ng-model="products.Selected" ng-change="CheckUncheckHeader()" />
+                    {{products.sku}}
+                  </label>
+                 </div> -->
+                
+
+              </div>
+          </div>
+      </div>
